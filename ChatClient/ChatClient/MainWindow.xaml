@@ -1,0 +1,23 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="OneChatterClient" Height="450" Width="800">
+    <Grid>
+        <Button Name="btn_IPAdd" Content="서버 IP 추가" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="100" Click="Btn_IPAdd_Click"/>
+        <Button Name="btn_IPDel" Content="서버 IP 삭제" HorizontalAlignment="Left" Margin="40,360,0,0" VerticalAlignment="Top" Width="100" Click="Btn_IPDel_Click"/>
+        <ListBox Name="listbox_IPandName" MouseDoubleClick="Listbox_IPandName_MouseDoubleClick" HorizontalAlignment="Left" Height="260" Margin="40,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="txtbox_HistoryChat" HorizontalAlignment="Left" Height="260" Margin="182,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="580" IsEnabled="False"/>
+        <Button Name="btn_Send" Content="전송" HorizontalAlignment="Left" Margin="662,360,0,0" VerticalAlignment="Top" Width="100" Click="Btn_Send_Click"/>
+        <TextBox Name="txtbox_Chat" KeyDown="Txtbox_Chat_KeyDown" HorizontalAlignment="Left" Height="20" Margin="182,360,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="460"/>
+        <Label Content="닉네임: " HorizontalAlignment="Left" Margin="182,34,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Label Name="label_Name" Content="NoName" HorizontalAlignment="Left" Margin="240,34,0,0" VerticalAlignment="Top" Width="297" IsEnabled="False"/>
+        <Button Name="btn_ChangeNick" Content="닉네임 변경" HorizontalAlignment="Left" Margin="542,40,0,0" VerticalAlignment="Top" Width="100" Click="Btn_ChangeNick_Click"/>
+        <Button x:Name="btn_ServerClose" Content="서버 끊기" HorizontalAlignment="Left" Margin="662,40,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="Btn_ServerClose_Click"/>
+
+    </Grid>
+</Window>
